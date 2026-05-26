@@ -116,6 +116,26 @@
     .placeholder-box.is-square {
       aspect-ratio: 1 / 1;
     }
+
+    .demo-result {
+      margin-bottom: 2rem;
+    }
+
+    .demo-result img,
+    .demo-result video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .demo-label {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+      color: #363636;
+    }
   </style>
 </head>
 
@@ -141,16 +161,16 @@
             <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
               <!-- TODO: Replace with actual authors -->
               <span class="author-block">
-                <a href="#" target="_blank" rel="noopener noreferrer">Jinwoo Jeon</a><sup>1</sup>,
+                <a href="https://zinuok.github.io/" target="_blank" rel="noopener noreferrer">Jinwoo Jeon</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="#" target="_blank" rel="noopener noreferrer">Dong-Uk Seo</a><sup>1</sup>,
+                <a href="https://seodu.github.io/" target="_blank" rel="noopener noreferrer">Dong-Uk Seo</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="#" target="_blank" rel="noopener noreferrer">Eungchang Mason Lee</a><sup>1</sup>,
+                <a href="https://engcang.github.io/" target="_blank" rel="noopener noreferrer">Eungchang Mason Lee</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="#" target="_blank" rel="noopener noreferrer">Hyun Myung</a><sup>1&dagger;</sup>
+                <a href="https://scholar.google.com/citations?user=NrWfJ1gAAAAJ&amp;hl=ko&amp;oi=ao" target="_blank" rel="noopener noreferrer">Hyun Myung</a><sup>1&dagger;</sup>
               </span>
             </div>
 
@@ -209,6 +229,26 @@
     </div>
   </section>
 
+  <!-- ======== MAIN DEMO / TEASER VIDEO ======== -->
+  <section class="section" id="demo">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Video</h2>
+      <p class="has-text-centered" style="margin-bottom: 1.5rem;">
+        <!-- TODO: Replace with your demo description -->
+        AIM-SLAM achieves robust real-time SLAM performance across diverse environments.
+      </p>
+
+      <!-- Option A: Single teaser video (YouTube) -->
+      <div style="position: relative; max-width: 720px; margin: 0 auto 1rem; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px;">
+        <iframe src="https://www.youtube.com/embed/j7UiAI_LD74"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;"
+          title="AIM-SLAM teaser video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- ======== ABSTRACT ======== -->
   <section class="section is-small" id="abstract">
     <div class="container is-max-desktop">
@@ -244,22 +284,34 @@
     </div>
   </section>
 
-  <!-- ======== MAIN DEMO / TEASER VIDEO ======== -->
-  <section class="section" id="demo">
+  <!-- ======== METHOD ======== -->
+  <section class="section is-small" id="method" style="background: #f9f9f9;">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Video</h2>
-      <p class="has-text-centered" style="margin-bottom: 1.5rem;">
-        <!-- TODO: Replace with your demo description -->
-        AIM-SLAM achieves robust real-time SLAM performance across diverse environments.
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <figure class="image" style="margin-bottom: 1rem;">
+        <img src="./static/images/method.png" alt="Overall architecture of AIM-SLAM" width="1953" height="639" style="border-radius: 8px;" loading="lazy">
+      </figure>
+      <p class="has-text-justified" style="font-size: 0.95rem; color: #4a4a4a;">
+        Overall architecture of AIM-SLAM. The frontend consists of (a) multi-view prioritization method via the proposed SIGMA module, followed by VGGT-based dense pointmap inference, and (b) joint multi-view Sim(3) optimization to mitigate short- and mid-term drift. The backend loop closure module performs global pose-graph optimization to ensure global consistency.
       </p>
+    </div>
+  </section>
 
-      <!-- Option A: Single teaser video (YouTube) -->
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 1rem; border-radius: 8px;">
-        <iframe src="https://www.youtube.com/embed/j7UiAI_LD74"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;"
-          title="AIM-SLAM teaser video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+  <!-- ======== DEMO ======== -->
+  <section class="section" id="demo-results">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Demo</h2>
+      <div class="demo-result">
+        <p class="demo-label">EuRoC</p>
+        <video autoplay loop muted playsinline width="1536" height="480">
+          <source src="./static/videos/result_euroc.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="demo-result">
+        <p class="demo-label">TUM RGB-D</p>
+        <video autoplay loop muted playsinline width="1536" height="480">
+          <source src="./static/videos/result_tum.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
