@@ -161,16 +161,20 @@
             <div class="is-size-5 publication-authors" style="margin-top: 1rem;">
               <!-- TODO: Replace with actual authors -->
               <span class="author-block">
-                <a href="https://zinuok.github.io/" target="_blank" rel="noopener noreferrer">Jinwoo Jeon</a><sup>1</sup>,
+                <a href="https://zinuok.github.io/" target="_blank" rel="noopener noreferrer">Jinwoo
+                  Jeon</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://seodu.github.io/" target="_blank" rel="noopener noreferrer">Dong-Uk Seo</a><sup>1</sup>,
+                <a href="https://seodu.github.io/" target="_blank" rel="noopener noreferrer">Dong-Uk
+                  Seo</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://engcang.github.io/" target="_blank" rel="noopener noreferrer">Eungchang Mason Lee</a><sup>1</sup>,
+                <a href="https://engcang.github.io/" target="_blank" rel="noopener noreferrer">Eungchang Mason
+                  Lee</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=NrWfJ1gAAAAJ&amp;hl=ko&amp;oi=ao" target="_blank" rel="noopener noreferrer">Hyun Myung</a><sup>1&dagger;</sup>
+                <a href="https://scholar.google.com/citations?user=NrWfJ1gAAAAJ&amp;hl=ko&amp;oi=ao" target="_blank"
+                  rel="noopener noreferrer">Hyun Myung</a><sup>1&dagger;</sup>
               </span>
             </div>
 
@@ -189,7 +193,8 @@
               <div class="publication-links">
                 <!-- TODO: Update href when links are available -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2603.05097" target="_blank" rel="noopener noreferrer" class="button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2603.05097" target="_blank" rel="noopener noreferrer"
+                    class="button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -205,7 +210,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=j7UiAI_LD74" target="_blank" rel="noopener noreferrer" class="button is-normal is-rounded is-dark">
+                  <a href="https://www.youtube.com/watch?v=j7UiAI_LD74" target="_blank" rel="noopener noreferrer"
+                    class="button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -217,7 +223,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (TBA)</span>
+                    <span>Code (Coming Soon!)</span>
                   </a>
                 </span>
               </div>
@@ -239,7 +245,8 @@
       </p>
 
       <!-- Option A: Single teaser video (YouTube) -->
-      <div style="position: relative; max-width: 720px; margin: 0 auto 1rem; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px;">
+      <div
+        style="position: relative; max-width: 720px; margin: 0 auto 1rem; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px;">
         <iframe src="https://www.youtube.com/embed/j7UiAI_LD74"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;"
           title="AIM-SLAM teaser video"
@@ -289,11 +296,19 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Method</h2>
       <figure class="image" style="margin-bottom: 1rem;">
-        <img src="./static/images/method.png" alt="Overall architecture of AIM-SLAM" width="1953" height="639" style="border-radius: 8px;" loading="lazy">
+        <img src="./static/images/method.png" alt="Overall architecture of AIM-SLAM" width="1953" height="639"
+          style="border-radius: 8px;" loading="lazy">
       </figure>
       <p class="has-text-justified" style="font-size: 0.95rem; color: #4a4a4a;">
-        Overall architecture of AIM-SLAM. The frontend consists of (a) multi-view prioritization method via the proposed SIGMA module, followed by VGGT-based dense pointmap inference, and (b) joint multi-view Sim(3) optimization to mitigate short- and mid-term drift. The backend loop closure module performs global pose-graph optimization to ensure global consistency.
+        Overall architecture of AIM-SLAM. The frontend consists of (a) multi-view prioritization method via the proposed
+        SIGMA module, followed by VGGT-based dense pointmap inference, and (b) joint multi-view Sim(3) optimization to
+        mitigate short- and mid-term drift. The backend loop closure module performs global pose-graph optimization to
+        ensure global consistency.
       </p>
+      <video autoplay loop muted playsinline width="1052" height="480"
+        style="width: 100%; height: auto; display: block; border-radius: 8px; margin-top: 1rem;">
+        <source src="./static/videos/result_mvs.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
